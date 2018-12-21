@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Web Publisher Kiminkyeoung</title>
+		
+		<!--폰트 및 디자인 css 적용-->
+		<link rel="stylesheet" type="text/css" href="css/squrefont.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<!--Jquery연결-->
+		<script src="js/jquery.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logo">
+				<img src="./images/logo.png" alt="logo" />
+			</div>
+			<div class="main_gnb">
+				<ul>
+					<li><a href="#AboutMe" title="ABOUTME">ABOUT ME</a></li>
+					<li><a href="#Portfolio" title="PORTFOLIO">PORTFOLIO</a></li>
+					<li><a href="#ContactMe" title="CONTACTME">CONTACT ME</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="slogan">
+			<p class="slogan_1">HELLO,</p>
+			<p class="slogan_2">THINK POSITIVE</p>
+		</div>
+		<div id="AboutMe">
+			<p class="main_title">ABOUT ME</p>
+			<div class="left_box fl">
+				<p class="sub_title">- 교육 및 자격증</p>
+				<div class="education">
+					<p>스프링 프레임워크 & 마이바티스 기초부터 실무 활용과정 (2018.1.~2.)</p>
+					<p>UI/UX의 이해와 활용(2016.7)</p>
+					<p>Jquery JSON/XML 이용기법(2016.3.)</p>
+				</div>
+				<div class="certification">
+					<p>정보처리기사(2016.11.18.)</p>
+					<p>웹디자인기능사(2014.12.26.)</p>
+					<p>GTQ 그래픽기술자격(2014.9.12.)</p>
+					<p>컴퓨터활용능력 2급(2013.8.13.)</p>
+					<p>정보기술자격 ITQ(아래한글,엑셀,파워포인트 2009.4.)</p>
+				</div>
+			</div>
+			<div class="right_box fr">
+				<p class="sub_title">- 경력 : 2013.12 ~ ING</p>
+				<p class="sub_title">- 거주지 : 대한민국 대전시</p>
+				<p class="sub_title">- 관심사 : SNS, 사진, 덕질</p>
+				<p class="sub_title">-  업무스킬</p>
+				<div class="skill_box">
+					<div>
+						<span>PHOTOSHOP</span>
+						<div class="graph" id="graph_0">
+							<div class="graph_value"></div>
+						</div>
+					</div>
+						
+					<div>
+						<span>HTML5/CSS3</span>
+						<div class="graph" id="graph_1">
+							<div class="graph_value"></div>
+						</div>
+					</div>
+						
+					<div>
+						<span>JavaScript/JQuery</span>
+						<div class="graph" id="graph_2">
+							<div class="graph_value"></div>
+						</div>
+					</div>
+						
+					<div>
+						<span>UI/UX</span>
+						<div class="graph" id="graph_3">
+							<div class="graph_value"></div>
+						</div>
+					</div>
+						
+					<div>
+						<span>문서작업</span>
+						<div class="graph" id="graph_4">
+							<div class="graph_value"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Portfolio">
+			<p class="main_title">PORTFOLIO</p>
+			<div class="tab_menu">
+				<ul>
+					<li class="active"><a onclick="select_year('all', this);" title="전체">전체</a></li>
+					<li><a onclick="select_year('2013', this);" title="2013">2013</a></li>
+					<li><a onclick="select_year('2014', this);" title="2014">2014</a></li>
+					<li><a onclick="select_year('2015', this);" title="2015">2015</a></li>
+					<li><a onclick="select_year('2016', this);" title="2016">2016</a></li>
+					<li><a onclick="select_year('2017', this);" title="2017">2017</a></li>
+					<li class="last"><a onclick="select_year('2018', this);" title="2018">2018</a></li>
+				</ul>
+			</div>
+			
+			<p class="center noti">※ 일부 작업물은 <span>저작권 문제로 게시가 불가</span>합니다. 자세한 사항은 <a href="#down_btn" title="경력기술서">경력기술서를 참고</a>해주시기 바랍니다.</p>
+			<div class="portfolio_box">
+				<figure class="portfolio_0" onclick="modal_show('detail_0');" >
+						<img src="./images/list_1.gif" alt="보령시청" />
+						<figcaption>
+							2013. 보령시청
+						</figcaption>
+						<input type="hidden" name="start_0"  value="2013"/>
+						<input type="hidden" name="end_0"  value="2013"/>
+				</figure>
+				<figure class="portfolio_1" onclick="modal_show('detail_1');" >
+						<img src="./images/list_2.gif" alt="에이블정보기술" />
+						<figcaption>
+								2014.~2018. 에이블정보기술
+						</figcaption>
+						<input type="hidden" name="start_1"  value="2014"/>
+						<input type="hidden" name="end_1"  value="2018"/>
+				</figure>
+				<figure class="portfolio_2" onclick="modal_show('detail_2');" >
+						<img src="./images/list_3.gif" alt="국가보훈처" />
+						<figcaption>
+								2017.~2018. 국가보훈처 보훈민원 시스템
+						</figcaption>
+						<input type="hidden" name="start_2"  value="2017"/>
+						<input type="hidden" name="end_2"  value="2018"/>
+				</figure>
+				<figure class="portfolio_3" onclick="modal_show('detail_3');" >
+						<img src="./images/list_4.gif" alt="당진시평생학습포털" />
+						<figcaption>
+								2016. ~ 2018. 당진시평생학습포털
+						</figcaption>
+						<input type="hidden" name="start_3"  value="2016"/>
+						<input type="hidden" name="end_3"  value="2018"/>
+				</figure>
+				<figure class="portfolio_4" onclick="modal_show('detail_4');" >
+						<img src="./images/list_5.gif" alt="나누텍" />
+						<figcaption>
+							2017. 나누텍
+						</figcaption>
+						<input type="hidden" name="start_4"  value="2017"/>
+						<input type="hidden" name="end_4"  value="2017"/>
+				</figure>
+				<figure class="portfolio_5" onclick="modal_show('detail_5');" >
+						<img src="./images/list_6.gif" alt="중소기업기술정보진흥원" />
+						<figcaption>
+							2015.~2017. 중소기업기술정보진흥원
+						</figcaption>
+						<input type="hidden" name="start_5"  value="2015"/>
+						<input type="hidden" name="end_5"  value="2017"/>
+				</figure>
+				<figure class="portfolio_6" onclick="modal_show('detail_6');" >
+						<img src="./images/list_7.gif" alt="한국썸벧" />
+						<figcaption>
+								2015.한국썸벧
+						</figcaption>
+						<input type="hidden" name="start_6"  value="2015"/>
+						<input type="hidden" name="end_6"  value="2015"/>
+				</figure>
+				<figure class="portfolio_7" onclick="modal_show('detail_7');" >
+						<img src="./images/list_8.gif" alt="3-one" />
+						<figcaption>
+							2014.~2018. 3-one
+						</figcaption>
+						<input type="hidden" name="start_7"  value="2014"/>
+						<input type="hidden" name="end_7"  value="2018"/>
+				</figure>
+				<figure class="portfolio_8" onclick="modal_show('detail_8');" >
+						<img src="./images/list_9.gif" alt="AIMS" />
+						<figcaption>
+							2015.~2018. AIMS
+						</figcaption>
+						<input type="hidden" name="start_8"  value="2015"/>
+						<input type="hidden" name="end_8"  value="2018"/>
+				</figure>
+			</div>
+		</div>
+		<div id="ContactMe">
+			<p class="main_title">CONTACT ME</p>
+			<div class="contact_box">
+				<p class="phone"><a href="tel:010-4519-5595">010 4519 5595</a></p>
+				<p class="mail"><a href="mailto:minto43@hanmail.net">minto43@hanmail.net</a></p>
+			</div>
+			<a href="CareerDescription.pdf" title="경력기술서다운로드" class="down_btn" id="down_btn" onclick="return false;">경력기술서 다운로드</a>
+		</div>
+		<div id="footer">
+			<p>이미지저작권 안내</p>
+			<p>포트폴리오 페이지에서는 무료사이트에서 사용한 이미지를 이용하고있습니다.</p>
+			<p>아이콘 : education,Certificate, Mail by priyanka from the Noun Project.</p>
+			<p>배경화면 : https://unsplash.com/photos/QffPabp1Du8</p>
+
+			<p class="center">해당 포트폴리오 페이지는 CHROME 브라우저에 최적화 되어 제작되었습니다. </p>
+			<p class="copyright">ⓒ 2018. KIM INKYEOUNG All rights reserved.</p>
+		</div>
+
+		<div class="modal" id="detail_0" role="dialog">
+			<div class="modal-dialog" style="width:1135px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">홈페이지 상세보기</h2>
+						<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_0');" class="close modal-end"/>
+					</div>
+					<div class="modal-body">
+						<div class="detail_portfolio">
+								<p class="text_title">보령시청 홈페이지 구축</p>
+								<div class="img_box fl">
+								<img src="./images/list_1.gif" alt="보령시청" />
+								</div>
+								<div class="content_box fr">
+									<table>
+										<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+										<colgroup>
+											<col style="width:30%" />
+											<col style="width:70%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>프로젝트명(발주처)</th>
+												<td>보령시청 및 유관기관 홈페이지 리뉴얼(보령시청)</td>
+											</tr>
+											<tr>
+												<th>프로젝트기간</th>
+												<td>2013.12.~2014.01.</td>
+											</tr>
+											<tr>
+												<th>사용언어</th>
+												<td>HTML, CSS3</td>
+											</tr>
+											<tr>
+												<th>주요업무 및 역할</th>
+												<td>
+													<p>서브페이지 마크업(약 200페이지)</p>
+													<p>홈페이지 메뉴 등록</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_1" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_1');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">에이블정보기술 홈페이지 리뉴얼</p>
+							<div class="img_box fl">
+									<img src="./images/list_2.gif" alt="에이블정보기술" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>에이블정보기술 홈페이지 리뉴얼(에이블정보기술)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2015.04.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>HTML, CSS3, Jquery,Javascript , Javascript</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>전체페이지 마크업(약 30페이지)</p>
+												<p>프런트앤드 개발 담당</p>
+												<p>반응형 홈페이지 구현</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="modal" id="detail_2" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_2');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">G클라우드기반 ERMS구축사업</p>
+							<div class="img_box fl">
+									<img src="./images/list_3.gif" alt="국가보훈처" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>G클라우드기반 ERMS구축사업(국가보훈처)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2016.12.~2017.04.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>JSP, CSS3, HTML, Javascript, Jquery3</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>국가보훈처 대표홈페이지 처장과의대화/FAQ 페이지 마크업</p>
+												<p>반응형 홈페이지 구현</p>
+												<p>ERMS 관리자 페이지 마크업</p>
+												<p>전체페이지 프런트앤드 개발 담당</p>
+												<p>산출물 작성</p>
+												<p>제안서 작성</p>
+												<p>고객응대 및 미팅 참여</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_3" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_3');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">당진시 평생학습 통합정보시스템 구축</p>
+							<div class="img_box fl">
+							<img src="./images/list_4.gif" alt="당진평생학습포털" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>당진시 평생학습 통합정보시스템 구축(당진시청)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2016.03.~2016.06.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>Ruby on Rails, HTML, CSS3,Javascript , Jquery</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>전체페이지 디자인 마크업(약 70페이지)</p>
+												<p>관리자페이지 디자인 마크업(약 20페이지)</p>
+												<p>프런트앤드 개발 담당</p>
+												<p>반응형 홈페이지 구현(약 70페이지)</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_4" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_4');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">나누텍홈페이지 구축</p>
+							<div class="img_box fl">
+							<img src="./images/list_5.gif" alt="나누텍"" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>나누텍홈페이지 구축(에이블정보기술)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2017.05.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>uby on Rails, HTML, CSS3,Javascript , Jquery</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>홈페이지 기획참여</p>
+												<p>전체페이지 마크업(약 10페이지)</p>
+												<p>지도 API 연동</p>
+												<p>반응형 홈페이지 구현</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_5" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_5');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">중소기업기술정보진흥원 원내시스템 고도화</p>
+							<div class="img_box fl">
+							<img src="./images/list_6.gif" alt="중소기업기술정보진흥원" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>원내시스템 고도화(중소기업기술정보진흥원 )</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2015.04.~2017.04.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>HTML5, Css3,Javascript , PhotoShop</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>서브컨텐츠 디자인 적용</p>
+												<p>청렴인물 배너디자인</p>
+												<p>홈페이지 컨텐츠 수정</p>
+												<p>팝업 게시</p>
+												<p>그 외 기타 홈페이지 유지보수</p>
+														
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_6" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_6');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">한국썸벧 홈페이지 리뉴얼</p>
+							<div class="img_box fl">
+								<img src="./images/list_7.gif" alt="한국썸벧" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>한국썸벧 홈페이지 리뉴얼(한국썸벧)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2013.12.~2014.01.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>Ruby on Rails, HTML, CSS3,Javascript , Jquery</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>전체페이지 마크업(약 20페이지)</p>
+												<p>프런트앤드 개발 담당</p>
+												<p>모바일 홈페이지 구현(약 20페이지)</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_7" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_7');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+							<div class="detail_portfolio">
+							<p class="text_title">재해복구운영자동화솔루션 3-one</p>
+							<div class="img_box fl">
+							<img src="./images/list_8.gif" alt="3-one" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>재해복구운영자동화솔루션 3-one(에이블정보기술)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2015.06.~2018.11.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>Ruby on Rails, HTML, CSS3,Javascript , Jquery, Jquery UI, Mysql</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>시장조사 및 기획 참여</p>
+												<p>전체페이지 마크업</p>
+												<p>프런트앤드 기능 구현(그래프, 타임라인,트리메뉴 등)</p>
+												<p>고객응대 및 커스터마이징 진행</p>
+												<p>	소프트웨어 품질인증서 GS 발급 (2016.7.)</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="detail_8" role="dialog">
+				<div class="modal-dialog" style="width:1135px;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title">홈페이지 상세보기</h2>
+							<img src="images/modal_close.png" alt="닫기" onclick="modal_hide('detail_8');" class="close modal-end"/>
+						</div>
+						<div class="modal-body">
+						<div class="detail_portfolio">
+							<p class="text_title">IT운영관리솔루션 AIMS 개발</p>
+							<div class="img_box fl">
+							<img src="./images/list_9.gif" alt="AIMS" />
+							</div>
+							<div class="content_box fr">
+								<table>
+									<caption>해당 포트폴리오에 해당하는 프로젝트명, 프로젝트기간, 사용언어, 주요업무를 작성합니다.</caption>
+									<colgroup>
+										<col style="width:30%" />
+										<col style="width:70%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>프로젝트명(발주처)</th>
+											<td>IT운영관리솔루션 AIMS 개발(에이블정보기술)</td>
+										</tr>
+										<tr>
+											<th>프로젝트기간</th>
+											<td>2015.11~2018.11.</td>
+										</tr>
+										<tr>
+											<th>사용언어</th>
+											<td>Ruby on Rails, HTML, CSS3,Javascript , Jquery, Jquery UI, Mysql</td>
+										</tr>
+										<tr>
+											<th>주요업무 및 역할</th>
+											<td>
+												<p>솔루션 기획 참여</p>
+												<p>전체페이지 마크업 </p>
+												<p>고객응대 및 커스터마이징 진행</p>
+												<p>그래프, 캘린더, 탭메뉴 등 프런트앤드 기능 구현</p>
+												<p>자산관리 DB 설계 참여</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
