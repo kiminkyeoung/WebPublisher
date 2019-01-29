@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Web Publisher Kiminkyeoung-Portfoilio</title>
+		
+		<!--폰트 및 디자인 css 적용-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR" rel="stylesheet">
+		
+
+
+		<!--Jquery연결-->
+		<script src="js/jquery.js"></script>
+		<script src="js/carousel.js"></script>
+
+		<!--메인-->
+		<script src="js/main.js"></script>
+		<script src="js/sub.js"></script>
+
+
+
+
+	</head>
+	<body>
+		<div class="loading">
+			<img src="images/loading.gif" alt="로딩중입니다." />
+			<p>잠시만 기다려주세요.</p>
+		</div>
+		<header id="header">
+			<a href="index.html" title="메인으로이동" class="logo"><img src="images/logo.png" alt="logo"/></a>
+			<ul class="main_gnb">
+				<li>
+					<a href="index.html#whoami" title="WHOAMI">
+						<h3>WHO AM I</h3>
+						<h3>소개글</h3>
+					</a>
+				</li>
+				<li>
+					<a href="index.html#myskill" title="SKILL">
+						<h3>SKILL</h3>
+						<h3>보유능력</h3>
+					</a>
+				</li>
+				<li>
+					<a href="sub_01.html" title="PORTFOILO">
+						<h3>PORTFOILO</h3>
+						<h3>포트폴리오</h3>
+					</a>
+				</li>
+				<li>
+					<a href="index.html#contactme" title="CONTACT ME">
+						<h3>CONTACT</h3>
+						<h3>연락하기</h3>
+					</a>
+				</li>
+			</ul>
+		</header>
+		
+		<!--detail-->
+		<div class="portfolio_detail">
+			<div class="portfolio_arrow">
+				<a class="prev">
+					<img src="images/slide_prev.png" alt="이전으로" />
+				</a>
+				<a class="next">
+					<img src="images/slide_next.png" alt="다음으로" />
+				</a>
+			</div>
+			<div class="port_info" id="portlist_0">
+				<div class="port_img">
+					<img src="images/port_img0.png" alt="보령시청" />
+				</div>
+				<div class="port_info_text">
+					<div style="position:relative; width:100%; height:100%;">
+						<h1>보령시청 홈페이지</h1>
+						<h3>2015.12.~2016.01.</h3>
+						<h2><strong>사용언어</strong><span class="coding_lang">HTML3/CSS3</span></h2>
+						<h2><strong>발&nbsp;&nbsp;주&nbsp;&nbsp;처</strong><span class="company">보령시청(메이아이)</span></h2>
+						<div>
+							<strong>주 요 업 무</strong>
+							<ul>
+								<li>서브페이지 마크업</li>
+								<li>기관 홈페이지 메뉴 및 링크 작업</li>
+							</ul>
+						</div>
+						<div class="btn_box">
+							<a href="http://www.brcn.go.kr" title="자세히보기" target="_blank">자세히보기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio_slide">
+			<div class="bullet_title">ANOTHER PORTFIOLO</div>
+		
+				<!-- Wrapper for slides -->
+				<!--포트폴리오 순서
+				
+					1.구축사업
+					 - (2014.12~2015.1.) 보령시청 홈페이지 제작
+					 - (2015.4.~2015.5.) 에이블정보기술 홈페이지 제작
+					 - (2015.9.~2015.11.) 썸벧홈페이지 제작
+					 - (2016.5.~2016.9.) 당진시평생학습포털 제작
+					 - (2016.12.~2017.4.) 국가보훈처 ERMS 시스템 구축
+					 - (2017.4.~2017.6.) 당진시평생학습포털 사전예약 시스템 구축
+					 - (2017.5.~2017.6.) 나누텍 홈페이지 제작
+					 - (2018.5.~2018.11.) 중소벤처기업부 업무포털 시스템 제작(2차고도화)
+
+					2.유지보수
+					 - (2015.5~2017.4.) 중소기업기술정보진흥원 유지보수 
+					 - (2016.8.~2017.2.) 국가보훈처 보훈나라 시스템 유지보수
+					 - (2016.10.~2018.11.) 당진시평생학습포털 유지보수 
+					 - (2017.4.~2018.11.) 국가보훈처 ERMS 시스템 유지보수
+
+					3. 고도화
+					 - (2016.8.~2016.8.10.) 중소벤처기업부 업무포털 1차 고도화
+					 - (2016.10.~2017.1) 중소벤처기업부 비즈니스지원단-기업마당 시스템 통합 사업
+
+					 4. 솔루션
+					 - (2015.10.~2018.11.)3-one
+					 - (2015.12.~2018.11.)Aims
+				-->
+
+
+
+			
+			<ul class="slide_ul">
+				<li>
+					<a href="#" onclick="port_View(0);" title="포트폴리오자세히보기">
+						<img src="images/list_1.gif" alt="보령시청" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="responsive_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>보령시청 홈페이지</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(1);" title="포트폴리오자세히보기">
+						<img src="images/list_2.gif" alt="에이블정보기술" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="responsive_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>에이블정보기술 홈페이지</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(2);" title="포트폴리오자세히보기">
+						<img src="images/list_3.gif" alt="한국썸벧" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>한국썸벧 홈페이지</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(3);" title="포트폴리오자세히보기">
+						<img src="images/list_4.gif" alt="3-one" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+						</div>
+						<p>[솔루션] 3-one</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(4);" title="포트폴리오자세히보기">
+						<img src="images/list_5.gif" alt="AIMS" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+						</div>
+						<p>[솔루션] AIMS</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(5);" title="포트폴리오자세히보기">
+						<img src="images/list_6.gif" alt="당진시평생학습포털" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="responsive_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>당진시평생학습포털 홈페이지</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(6);" title="포트폴리오자세히보기">
+						<img src="images/list_7.gif" alt="국가보훈처" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="responsive_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>국가보훈처 ERMS 시스템</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(7);" title="포트폴리오자세히보기">		
+						<img src="images/list_8.gif" alt="나누텍" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="responsive_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>나누텍 홈페이지</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="port_View(8);" title="포트폴리오자세히보기">
+						<img src="images/list_9.gif" alt="중소벤처기업부" />
+						<div class="bullet">
+							<div class="PC_bullet"></div>
+							<div class="mobile_bullet"></div>
+						</div>
+						<p>중소벤처기업부 업무포털 홈페이지</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--footer-->
+		<footer class="footer">
+			<p>해당 포트폴리오 페이지는 CHROME 브라우저에 최적화 되어 제작되었습니다.</p>
+			<p>ⓒ 2018. KIM INKYEOUNG All rights reserved.</p>
+		</footer>
+	</body>
+</html>
