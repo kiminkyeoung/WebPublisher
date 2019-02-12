@@ -192,6 +192,25 @@
 					};
 			
 					var map = new daum.maps.Map(container, options);
+
+					//지도컨트롤러
+					var mapTypeControl = new daum.maps.MapTypeControl();
+					map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+					var zoomControl = new daum.maps.ZoomControl();
+					map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);	
+
+					// 타일 로드가 완료되면 지도 중심에 마커를 표시합니다
+					daum.maps.event.addListener(map, 'tilesloaded', displayMarker);
+
+					function displayMarker() {
+						marker.setPosition(map.getCenter()); 
+						marker.setMap(map); 
+
+						// 아래 코드는 최초 한번만 타일로드 이벤트가 발생했을 때 어떤 처리를 하고 
+						// 지도에 등록된 타일로드 이벤트를 제거하는 코드입니다 
+						// daum.maps.event.removeListener(map, 'tilesloaded', displayMarker);
+					}
+
 				</script>
 			</div>
 			
