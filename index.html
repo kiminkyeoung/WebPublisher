@@ -199,17 +199,32 @@
 					var zoomControl = new daum.maps.ZoomControl();
 					map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);	
 
-					// 타일 로드가 완료되면 지도 중심에 마커를 표시합니다
-					daum.maps.event.addListener(map, 'tilesloaded', displayMarker);
+				// 주소-좌표 변환 객체를 생성합니다
+				var geocoder = new daum.maps.services.Geocoder();
 
-					function displayMarker() {
-						marker.setPosition(map.getCenter()); 
-						marker.setMap(map); 
+				// 주소로 좌표를 검색합니다
+				geocoder.addressSearch('대전광역시 유성구 관평동', function(result, status) {
 
-						// 아래 코드는 최초 한번만 타일로드 이벤트가 발생했을 때 어떤 처리를 하고 
-						// 지도에 등록된 타일로드 이벤트를 제거하는 코드입니다 
-						// daum.maps.event.removeListener(map, 'tilesloaded', displayMarker);
-					}
+					// 정상적으로 검색이 완료됐으면 
+					if (status === daum.maps.services.Status.OK) {
+
+						var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+						// 결과값으로 받은 위치를 마커로 표시합니다
+						var marker = new daum.maps.Marker({
+							map: map,
+							position: coords
+						});
+
+						// 인포윈도우로 장소에 대한 설명을 표시합니다
+						var infowindow = new daum.maps.InfoWindow({
+							content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
+						});
+						infowindow.open(map, marker);
+
+						// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+						map.setCenter(coords);
+					} 
 
 				</script>
 			</div>
