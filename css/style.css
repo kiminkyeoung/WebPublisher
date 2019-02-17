@@ -6,7 +6,7 @@ img {border:0; margin:0; padding:0;}
 ul,ol {list-style:none; padding:0;}
 
 button {border-style:none;}
-a {text-decoration:none; color:#333; cursor:pointer; outline:0 !important;  word-wrap:expression( this.style.wordWrap="normal",this.hideFocus=true);}
+a {text-decoration:none; color:#333; cursor:pointer; outline:0 !important;  word-wrap:expression(this.style.wordWrap="normal",this.hideFocus=true);}
 a:hover, a:active, a:focus {color:#333;}
 table {border-collapse:collapse; cellspacing:0; cellpadding:0; word-break:break-all;}
 strong {font-weight:600;}
@@ -58,7 +58,7 @@ article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,se
 .loading p {width:100%; text-align:center; position:absolute; top:60%; font-size:18px; color:#d36672; font-weight:bold;}
 
 /*header*/
-#header {width:100%; padding:10px 30px; position:absolute; top:0; left:0; z-index:999;}
+#header {width:100%; min-width:1400px; padding:10px 30px; position:absolute; top:0; left:0; z-index:999;}
 #header:after {display:block; clear:both; content:"";}
 #header .logo {float:left; display:block;}
 #header .logo img {width:60px;}
@@ -81,7 +81,7 @@ article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,se
 #slogan .slogan_text {position:absolute; display:none; left:0%; top:50%; margin:-145px 0 0 0;}
 
 /*WHO AM I*/
-.whoami {width:100%; height:100%; padding:150px 50px;}
+.whoami {width:100%; height:100%; min-height:942px; padding:150px 50px;}
 .whoami:after {display:block; clear:both; content:"";}
 .bullet_title {background:url("../images/bullet.png")no-repeat center left 5px; color:#524d4d; font-size:24px; padding:0 0 0 30px; font-weight:bold; margin:0 0 60px 0;}
 .second_title {font-size:20px; color:#524d4d; font-weight:bold; margin:0 0 30px 0;}
@@ -211,7 +211,7 @@ article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,se
 
 
 /*detail_subpage*/
-.portfolio_detail {position:relative; width:100%; height:100%; background:url("../images/skill_bg.gif") no-repeat; background-attachment:fixed; background-size:cover; padding:130px 0 0 0;}
+.portfolio_detail {position:relative; width:100%; height:100%; min-height:787px; background:url("../images/skill_bg.gif") no-repeat; background-attachment:fixed; background-size:cover; padding:130px 0 0 0;}
 .portfolio_detail:after {display:block; clear:both; content:"";}
 
 .portfolio_detail .portfolio_arrow {position:absolute; width:100%; height:570px;}
