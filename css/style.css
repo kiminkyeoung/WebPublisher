@@ -128,7 +128,7 @@ article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,se
 
 .skill_box {width:100%; height:100%; padding:50px; position:absolute; top:0; left:0; background:url("../images/skill_bg.gif") no-repeat; background-attachment:fixed; background-size:cover;}
 
-.graph_box {width:100%; padding:0 5%;}
+.graph_box {width:100%; max-width:1500px; margin:0 auto; padding:0 5%;}
 .graph_box ul {width:100%;}
 .graph_box ul:after {display:block; clear:both; content:"";}
 .graph_box ul li {width:20%; float:left; padding:0 10px; font-size:22px; color:#524d4d; font-weight:600; text-align:center;}
